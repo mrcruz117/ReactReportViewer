@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+/* eslint-disable */
+import React from 'react';
 import './App.css';
+//Report Viewer source
+import '@boldreports/javascript-reporting-controls/Scripts/bold.report-viewer.min';
+import '@boldreports/javascript-reporting-controls/Content/material/bold.reports.all.min.css';
+//Data-Visualization
+import '@boldreports/javascript-reporting-controls/Scripts/data-visualization/ej.bulletgraph.min';
+import '@boldreports/javascript-reporting-controls/Scripts/data-visualization/ej.chart.min';
+//Reports react base
+import '@boldreports/react-reporting-components/Scripts/bold.reports.react.min';
+
+var viewerStyle = {'height': '700px', 'width': '100%'};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={viewerStyle}>
+      <BoldReportViewerComponent
+      id="reportviewer-container">
+      </BoldReportViewerComponent>
     </div>
   );
 }
